@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('todoListMeanApp.todoEscape')
+angular.module('todoListMeanApp')
   .directive('todoEscape', function () {
-    return {
-      template: '<div></div>',
-      restrict: 'EA',
-      link: function (scope, element, attrs) {
-        element.text('this is the todoEscape directive');
-      }
+    var ESCAPE_KEY = 27;
+    return function (scope, elem, attrs) {
+      elem.bind('keydown', function (event) {
+        if (event.keyCode === ESCAPE_KEY) {
+          scope.$apply(attrs.todoEscape);
+        }
+      });
     };
   });

@@ -1,12 +1,14 @@
 'use strict';
 
-angular.module('todoListMeanApp.todoFocus')
-  .directive('todoFocus', function () {
-    return {
-      template: '<div></div>',
-      restrict: 'EA',
-      link: function (scope, element, attrs) {
-        element.text('this is the todoFocus directive');
-      }
+angular.module('todoListMeanApp')
+  .directive('todoFocus', function todoFocus($timeout) {
+    return function (scope, elem, attrs) {
+      scope.$watch(attrs.todoFocus, function (newVal) {
+        if (newVal) {
+          $timeout(function () {
+            elem[0].focus();
+          }, 0, false);
+        }
+      });
     };
   });

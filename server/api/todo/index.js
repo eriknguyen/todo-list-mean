@@ -5,7 +5,7 @@ var controller = require('./todo.controller');
 
 var router = express.Router();
 
-router.$routeParams('id', controller.todo);
+router.param('id', controller.todo);
 
 //router.get('/', controller.index);
 router.get('/', controller.query);

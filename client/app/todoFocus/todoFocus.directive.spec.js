@@ -3,7 +3,7 @@
 describe('Directive: todoFocus', function () {
 
   // load the directive's module
-  beforeEach(module('todoListMeanApp.todoFocus'));
+  beforeEach(module('todoListMeanApp'));
 
   var element,
     scope;
