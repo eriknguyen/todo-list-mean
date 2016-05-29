@@ -7,12 +7,12 @@
 		}
 	}
 
-	angular.module('todoListMeanApp')
+	/*angular.module('todoListMeanApp')
 		.component('main', {
 			templateUrl: 'app/main/main.html',
 			controller: 'MainCtrl',
 			reloadOnSearch: false
-		});
+		});*/
 
 	angular.module('todoListMeanApp')
 		.controller('MainCtrl', function($scope, $timeout, Todo, filterFilter, $location) {

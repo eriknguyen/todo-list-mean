@@ -4,7 +4,9 @@ angular.module('todoListMeanApp')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        template: '<main></main>'
+        templateUrl: 'app/main/main.html',
+        controller: 'MainCtrl',
+        reloadOnSearch: false
       });
   })
   .factory('Todo', function ($resource) {
