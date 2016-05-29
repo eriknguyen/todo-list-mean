@@ -12,6 +12,7 @@ var TodoSchema = new Schema({
 	completed: Boolean,
 	createdAt: Date,
 	updatedAt: Date,
+	test: Boolean
 });
 
 // keep track of when todos are updated and created

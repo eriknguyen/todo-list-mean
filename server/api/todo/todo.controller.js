@@ -108,20 +108,20 @@ export function create(req, res) {
 
 // Updates an existing Todo in the DB
 export function update(req, res) {
-  /*if (req.body._id) {
+  if (req.body._id) {
     delete req.body._id;
   }
   return Todo.findById(req.params.id).exec()
     .then(handleEntityNotFound(res))
     .then(saveUpdates(req.body))
     .then(respondWithResult(res))
-    .catch(handleError(res));*/
-  Todo.update({
+    .catch(handleError(res));
+  /*Todo.update({
     _id: req.todo._id
   }, req.body, {}, function(err, updatedTodo) {
     if (err) return res.json(500, err);
     res.json(updatedTodo);
-  });
+  });*/
 
 }
 

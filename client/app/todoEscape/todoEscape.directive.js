@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('todoListMeanApp')
+angular.module('todoListApp')
   .directive('todoEscape', function () {
     var ESCAPE_KEY = 27;
     return function (scope, elem, attrs) {

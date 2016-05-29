@@ -3,7 +3,7 @@
 describe('Component: MainComponent', function () {
 
   // load the controller's module
-  beforeEach(module('todoListMeanApp'));
+  beforeEach(module('todoListApp'));
 
   var MainComponent, scope;
 

@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('todoListMeanApp.util', []);
+angular.module('todoListApp.util', []);

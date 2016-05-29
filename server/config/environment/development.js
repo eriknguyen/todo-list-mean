@@ -6,7 +6,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/todolistmean-dev'
+    uri: 'mongodb://localhost/todolist-dev'
   },
 
   // Seed database on startup

@@ -3,7 +3,7 @@
 describe('Directive: todoEscape', function () {
 
   // load the directive's module
-  beforeEach(module('todoListMeanApp'));
+  beforeEach(module('todoListApp'));
 
   var element,
     scope;

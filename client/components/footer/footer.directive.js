@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('todoListMeanApp')
+angular.module('todoListApp')
   .directive('footer', function() {
     return {
       templateUrl: 'components/footer/footer.html',

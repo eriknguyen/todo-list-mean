@@ -65,6 +65,6 @@
     return Util;
   }
 
-  angular.module('todoListMeanApp.util')
+  angular.module('todoListApp.util')
     .factory('Util', UtilService);
 })();

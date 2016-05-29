@@ -3,18 +3,11 @@
 
 	class MainComponent {
 		constructor() {
-			this.message = 'Hello';
+			//this.message = 'Hello';
 		}
 	}
-
-	/*angular.module('todoListMeanApp')
-		.component('main', {
-			templateUrl: 'app/main/main.html',
-			controller: 'MainCtrl',
-			reloadOnSearch: false
-		});*/
-
-	angular.module('todoListMeanApp')
+	
+	angular.module('todoListApp')
 		.controller('MainCtrl', function($scope, $timeout, Todo, filterFilter, $location) {
 			$scope.todos = [];
 			$scope.newTodo = '';
@@ -38,7 +31,7 @@
 					completed: false
 				} : (status === 'completed') ? {
 					completed: true
-				} : null;
+				} : {};
 			});
 
 			// create a new todo locally save it remotely
@@ -50,7 +43,8 @@
 
 				var newTodo = new Todo({
 					title: todoTitle,
-					completed: false
+					completed: false,
+					test: true
 				});
 				newTodo.$save();
 				$scope.todos.unshift(newTodo);
@@ -130,5 +124,4 @@
 				$timeout.cancel($scope.promise);
 			});
 		});
-
 })();

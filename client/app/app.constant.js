@@ -1,9 +1,13 @@
 (function(angular, undefined) {
-'use strict';
+  angular.module("todoListApp.constants", [])
 
-angular.module('todoListMeanApp.constants', [])
-
-.constant('appConfig', {userRoles:['guest','user','admin']})
+.constant("appConfig", {
+	"userRoles": [
+		"guest",
+		"user",
+		"admin"
+	]
+})
 
 ;
 })(angular);

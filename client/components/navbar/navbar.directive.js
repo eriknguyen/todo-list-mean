@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('todoListMeanApp')
+angular.module('todoListApp')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

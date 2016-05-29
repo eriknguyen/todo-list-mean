@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('todoListMeanApp')
+angular.module('todoListApp')
   .directive('todoFocus', function todoFocus($timeout) {
     return function (scope, elem, attrs) {
       scope.$watch(attrs.todoFocus, function (newVal) {
