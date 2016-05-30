@@ -57,16 +57,23 @@ input[type="checkbox"] {
 #todoapp {
     width: 100%;
     max-width: 600px;
+    padding: 0 20px;
     margin: 0 auto;
     & input::-webkit-input-placeholder {
     	font-size: 20px;
         font-style: italic;
         color: #fff;
+        @media screen and (max-width: 640px) {
+            font-size: 16px;
+        }
     }
     & input::-moz-placeholder {
         font-style: italic;
         color: #fff;
     }
+    @media screen and (max-width: 640px) {
+        padding: 0 10px;
+        }
 }
 
 .list-title {
@@ -75,6 +82,9 @@ input[type="checkbox"] {
     font-weight: 100;
     text-align: center;
     text-transform: uppercase;
+    @media screen and (max-width: 640px) {
+        font-size: 36px;
+    }
 }
 
 #new-todo,
@@ -82,7 +92,7 @@ input[type="checkbox"] {
     position: relative;
     margin: 0;
     width: 100%;
-    font-size: 24px;
+    font-size: 18px;
     font-family: inherit;
     line-height: 1.4em;
     border: 0;
@@ -104,12 +114,15 @@ input[type="checkbox"] {
 
 #new-todo {
 	margin: 10px 0;
-    padding: 16px 16px 16px 60px;
+    padding: 16px 16px 16px 20px;
     border: none;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 2;
     box-shadow: none;
+    @media screen and (max-width: 640px) {
+        padding: 10px 10px 10px 20px;
+    }
 }
 
 .todo-list {
@@ -139,6 +152,15 @@ input[type="checkbox"] {
         display: block;
     }
 }
+@media screen and (max-width: 640px) {
+    .todo-item {
+        font-size: 18px;
+        .todo-content {
+            line-height: 0.8;
+            padding: 15px 40px 15px 15px;
+        }
+    }
+}
 
 .todo-item.editing {
     color: #262626;
@@ -146,9 +168,9 @@ input[type="checkbox"] {
     padding: 0;
     & .edit {
         display: block;
-        width: 506px;
-        padding: 13px 17px 12px 17px;
-        margin: 0 0 0 43px;
+        width: 80%;
+        padding: 10px 10px 10px 10px;
+        margin: 0 0 0 40px;
     }
     & .view {
         display: none;
@@ -197,6 +219,9 @@ input[type="checkbox"] {
         font-size: 20px;
         color: #ecf0f1;
         text-shadow: 0 -1px 0 #bfbfbf;
+        @media screen and (max-width: 640px) {
+            line-height: 45px;
+        }
     }
     &:checked:after {
         color: #85ada7;
@@ -228,6 +253,12 @@ input[type="checkbox"] {
     &:after {
         content: '✖';
     }
+    @media screen and (max-width: 640px) {
+        font-size: 18px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .list-footer {
@@ -249,6 +280,9 @@ input[type="checkbox"] {
         z-index: -1;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 6px 0 -3px rgba(255, 255, 255, 0.8), 0 7px 1px -3px rgba(0, 0, 0, 0.3), 0 43px 0 -6px rgba(255, 255, 255, 0.8), 0 44px 2px -6px rgba(0, 0, 0, 0.2);
     }
+    .list-status {
+        @include clearfix;
+    }
 }
 
 #todo-count {
@@ -257,28 +291,32 @@ input[type="checkbox"] {
 }
 
 #filters {
+    display: block;
+    @include clearfix;
     margin: 0;
     padding: 0;
     list-style: none;
-    position: absolute;
-    right: 0;
-    left: 0;
     & li {
-        display: inline;
+        display: inline-block;
         & a {
             color: #fff;
-            margin: 2px;
+            margin: 5px;
             text-decoration: none;
         }
         & a.selected {
             font-weight: bold;
         }
     }
+    // @media screen and (max-width: 640px) {
+    //     position: relative;
+    //     top: 40px;
+    //     @include clearfix;
+    // }
 }
 
 #clear-completed {
+    display: block;
     float: right;
-    position: relative;
     line-height: 20px;
     text-decoration: none;
     background: rgba(0, 0, 0, 0.1);

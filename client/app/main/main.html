@@ -22,20 +22,25 @@
         </ul>
     </div>
     <div class="list-footer" ng-show="todos.length">
-        <span id="todo-count"><strong>{{remainingCount}}</strong>
-      <ng-pluralize count="remainingCount" when="{ one: 'todo left', other: 'todos left' }"></ng-pluralize>
-    </span>
-        <ul id="filters">
-            <li>
-                <a ng-class="{selected: status == ''} " href="?">All</a>
-            </li>
-            <li>
-                <a ng-class="{selected: status == 'active'}" href="?q=active">Unfinished</a>
-            </li>
-            <li>
-                <a ng-class="{selected: status == 'completed'}" href="?q=completed">Done</a>
-            </li>
-        </ul>
-        <button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Remove done todos ({{completedCount}})</button>
+        <div class="list-status">
+            <span id="todo-count">
+                <strong>{{remainingCount}}</strong>
+                <ng-pluralize count="remainingCount" when="{ one: 'todo left', other: 'todos left' }"></ng-pluralize>
+            </span>
+            <button class="todo-delete" id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Remove done todos ({{completedCount}})</button>
+        </div>
+        <div class="list-filter">
+            <ul id="filters">
+                <li>
+                    <a ng-class="{selected: status == ''} " href="?">All</a>
+                </li>
+                <li>
+                    <a ng-class="{selected: status == 'active'}" href="?q=active">Unfinished</a>
+                </li>
+                <li>
+                    <a ng-class="{selected: status == 'completed'}" href="?q=completed">Done</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
